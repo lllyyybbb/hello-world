@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>
+        Poetry Revision Exercise Generator
+    </title>
+</head>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: rgb(35, 243, 226);
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: bolder;
+    }
+
+    .navbar a:hover {
+        background: #ddd;
+        color: blue;
+    }
+
+    .main {
+        padding: 16px;
+        margin-top: 30px;
+        height: 1500px;
+        /* Used in this example to enable scrolling */
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">Submit Your Own</a>
+        <a href="#contact">Contact</a>
+    </div>
+    </style>
+
+    <body style="text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+      margin-top: 100px;
+      font-family: 'Raleway', sans-serif;">
+
+
+
+        <h1 style="color:  rgb(35, 243, 226);
+        text-align:center">
+            Poem Revision Prompts
+        </h1>
+
+        <p id="GFG_UP" style="font-size: 15px; font-weight: bold;">
+        </p>
+
+        <button id="button" onclick="prompt()">
+            click here
+        </button>
+
+        <p id="GFG_DOWN" style="font-size: 18px; font-weight: bold; color: rgb(35, 243, 226); 
+    margin-left:100px; margin-right:100px">
+        </p>
+        <script>
+            var up = document.getElementById('GFG_UP');
+            var down = document.getElementById('GFG_DOWN');
+
+            var arr =
+                ["<i>Turn the paper over and start again (or, start a new document)</i>:<br> Rewrite it\
+                in lines or a freewrite, <br> but cover the same experience, event, or idea. <br>\
+                Feel free to change add to, or go in a different direction from the original.",
+
+                    "Change the way the poem looks on the page and you can't but help change <br>\
+                 some language as well. You might alter line length, <br> stanza breaks, flush-left margins, poem length\
+                 punctuations, capitals, etc.",
+
+                    "Take the last line of the poem and make it the first line.<br>\
+                 Using this as the new starting point,<br>\
+                 re-write the poem from memory, without looking at the original."
+                ];
+
+            up.innerHTML = "Click on the button to receive a prompt";
+
+            function random(mn, mx) {
+                return Math.random() * (mx - mn) + mn;
+            }
+
+            function prompt() {
+                down.innerHTML = arr[Math.floor(random(1, 5)) - 1];
+            }  
+        </script>
+    </body>
+
+</html>
